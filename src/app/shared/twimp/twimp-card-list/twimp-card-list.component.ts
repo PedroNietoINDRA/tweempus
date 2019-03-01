@@ -19,4 +19,8 @@ export class TwimpCardListComponent implements OnInit {
     this.twimps.push(new Twimp('3', '', this.authors[0], this.text, '01/01/2000'));
     this.twimps.push(new Twimp('4', '', this.authors[0], this.text, '01/01/2000'));
   }
+
+  trackByTwimps(index: number, twimp: Twimp): string {
+    return twimp.id; 
+  }
 }
